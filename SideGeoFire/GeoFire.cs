@@ -1,7 +1,5 @@
 ﻿
 using System.Data.Spatial;
-using System.Net;
-using System.Runtime.InteropServices.WindowsRuntime;
 using SideGeoFire.Exceptions;
 
 namespace SideGeoFire
@@ -12,9 +10,8 @@ namespace SideGeoFire
         /// Builds a firebase compatible GeoFire location entry
         /// </summary>
         /// <param name="geography">geography object containing location</param>
-        /// <param name="key">location key</param>
         /// <returns>Key stored in geofire</returns>
-        public static string BuildGeoHash(DbGeography geography, string key)
+        public static string BuildGeoHash(DbGeography geography)
         {
             if (geography == null) throw new GeoFireException("geography argument is null");
             if (geography.Latitude == null || geography.Longitude == null)
@@ -47,10 +44,12 @@ namespace SideGeoFire
         /// <param name="latitude">latitude of location</param>
         /// <param name="longitude">longitude of location</param>
         /// <param name="geohash">An encoded geohash object</param>
+        /// <param name="includePriority">When set to true, the priority is set in the object. Legacy</param>
         /// <returns></returns>
-        private static string BuildLocationWithPriority(double latitude, double longitude, string geohash)
+        private static string BuildLocationWithPriority(double latitude, double longitude, string geohash, bool includePriority = false)
         {
-            return string.Format("{{'g': '{0}', 'l': {{'0': {1}, '1': {2}}}, '.priority': '{0}'}}", geohash, latitude, longitude);
+            return
+                $"{{'g': '{geohash}', 'l': {{'0': {latitude}, '1': {longitude}}}{(includePriority ? ", '.priority': '{0}'}" : "")}}}";
         }
 
         /// <summary>

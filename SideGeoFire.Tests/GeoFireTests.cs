@@ -39,7 +39,7 @@ namespace SideGeoFire.Tests
             var geography = GenerateLocation(Latitude, Longitude);
 
             // Build the geohash
-            var geoHash = GeoFire.BuildGeoHash(geography, Key);
+            var geoHash = GeoFire.BuildGeoHash(geography);
 
             // Deserialize the geohash into an object
             var deserializedResult = JsonConvert.DeserializeObject(geoHash);

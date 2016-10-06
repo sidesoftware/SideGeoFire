@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/sidesoftware/SideGeoFire</projectUrl>
+    <licenseUrl>https://github.com/sidesoftware/SideGeoFire/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release for generating geofire objects for firebase using .net.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Firebase,Geofire,Geohash</tags>
+  </metadata>
+</package>
