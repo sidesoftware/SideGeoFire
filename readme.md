@@ -14,24 +14,25 @@ Install-Package SideGeoFire
 
 The GeoFire object contains a function called BuildGeoHash which has two overloads. The first accepts a System.Data.Spatial.DbGeography object. The second accepts both latitude and longitude.
 
-**string BuildGeoHash(DbGeography, Key)**
+**string BuildGeoHash(DbGeography)**
 
 ```csharp
 // Create a DBGeography object from a Latitude and Longitude
 var geography = GenerateLocation(latitude, longitude);
 
 // Build the geohash
-var geoHash = GeoFire.BuildGeoHash(geography, Key);
+var geoHash = GeoFire.BuildGeoHash(geography);
 ```
 
-**string BuildGeoHash(Latitude, Longitude, Key)**
+**string BuildGeoHash(Latitude, Longitude)**
 
 ```csharp
 // Build the geohash
 var geoHash = GeoFire.BuildGeoHash(latitude, longitude);
 ```
 
-**Returns**
+#### Returns
+
 The result of the BuildGeoHash is a JSON object formatted to the firebase specification. The **g** object is the geohash and the **l** is the latitude and longitude.
 ```json
 {
