@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideGeoFire", "SideGeoFire\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideGeoFire.Tests", "SideGeoFire.Tests\SideGeoFire.Tests.csproj", "{1A36A612-536B-41A2-BEB1-2EAB544A5A20}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{6AE48365-625F-4F2C-B419-FC73DC29082A}"
+	ProjectSection(SolutionItems) = preProject
+		SideGeoFire\license.md = SideGeoFire\license.md
+		SideGeoFire\readme.md = SideGeoFire\readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
