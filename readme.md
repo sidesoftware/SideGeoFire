@@ -24,7 +24,7 @@ var geography = GenerateLocation(latitude, longitude);
 var geoHash = GeoFire.BuildGeoHash(geography, Key);
 ```
 
-**string BuildGeoHash(DbGeography, Key)**
+**string BuildGeoHash(Latitude, Longitude, Key)**
 
 ```csharp
 // Build the geohash
